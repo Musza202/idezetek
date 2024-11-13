@@ -1,0 +1,61 @@
+body{
+    background-color: #fff4ff;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size: xx-large;
+}
+h2{
+    font-size: medium;
+}
+body>div{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    border-radius:20px ;
+}
+#gombok{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+#gombok>button:nth-child(odd){
+    background-color:dodgerblue;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    padding: 7px;
+}
+#gombok>button:nth-child(even){
+    background-color:orange;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    padding:10px;
+}
+#idezet{
+    background-color: #fff4ff;
+    height: 70px;
+    text-align: center;
+    padding: 15px;
+    width: 400px;
+    border-radius:20px ;
+    margin:10px;
+}
+#idezet>figcaption{
+    font-size: small;
+    margin: 5px;
+    font-style: italic;
+}
+#kedvenc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: small;
+    padding: 5px;
+    margin: 5px;
+}
