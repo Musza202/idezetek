@@ -37,13 +37,26 @@ let index = 0;
 let kedv = [];
 
 function hozad_kedv(){
-    kedv.push(idezetek[index]);
-    kedv_megj();
+    let vizsg = true;
+    kedv.forEach(element => {
+        if(element.idezet==idezetek[index].idezet){
+            vizsg=false;
+        }
+    });
+    if(vizsg){
+        kedv.push(idezetek[index]);
+        kedv_megj();
+    }
+    
 }
 function balra(){
     if(index!=0){
         index--;
+        
         megj();
+    }
+    else{
+        document.getElementById("bal").style.backgroundColor="grey";
     }
 }
 function jobbra(){
@@ -53,6 +66,18 @@ function jobbra(){
     }
 }
 function megj(){
+    if(index==0){
+        document.getElementById("bal").style.backgroundColor="grey";
+    }
+    else{
+        document.getElementById("bal").style.backgroundColor="dodgerblue";
+    }
+    if(index==idezetek.length-1){
+        document.getElementById("jobb").style.backgroundColor="grey";
+    }
+    else{
+        document.getElementById("jobb").style.backgroundColor="dodgerblue";
+    }
     let i_div = document.createElement("div");
     let sz_fig = document.createElement("figcaption");
     idez_doboz.innerHTML="";
@@ -66,7 +91,7 @@ function kedv_megj(){
     let i_div = document.createElement("div");
     let sz_fig = document.createElement("figcaption");
     kedv.forEach(x => {
-        i_div.innerHTML=x.idezet;
+        i_div.innerHTML='"'+x.idezet+'"-';
         sz_fig.innerHTML=x.szerzo;
         kedv_doboz.appendChild(i_div);
         kedv_doboz.appendChild(sz_fig);
