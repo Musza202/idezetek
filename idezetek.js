@@ -42,16 +42,19 @@ function hozad_kedv(){
 function balra(){
     if(index!=0){
         index--;
+        megj();
     }
 }
 function jobbra(){
     if(index!=idezetek.length-1){
         index++;
+        megj()
     }
 }
 function megj(){
     let i_div = document.createElement("div");
     let sz_fig = document.createElement("figcaption");
+    idez_doboz.innerHTML="";
     i_div.innerHTML=idezetek[index].idezet;
     sz_fig.innerHTML=idezetek[index].szerzo;
     idez_doboz.appendChild(i_div);
