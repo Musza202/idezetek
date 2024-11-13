@@ -30,3 +30,31 @@ const idezetek = [
     { "idezet": "Ne hagyd, hogy a megélhetés iránti törekvés megakadályozzon abban, hogy életet élj.", "szerzo": "John Wooden" },
     { "idezet": "Az életed akkor javul, ha te is fejlődsz.", "szerzo": "Brian Tracy" }
 ];
+
+let idez_doboz = document.getElementById("idezet");
+let kedv_doboz = document.getElementById("kedvenc");
+let index = 0;
+let kedv = [];
+
+function hozad_kedv(){
+
+}
+function balra(){
+    if(index!=0){
+        index--;
+    }
+}
+function jobbra(){
+    if(index!=idezetek.length-1){
+        index++;
+    }
+}
+function megj(){
+    let i_div = document.createElement("div");
+    let sz_fig = document.createElement("figcaption");
+    i_div.innerHTML=idezetek[index].idezet;
+    sz_fig.innerHTML=idezetek[index].szerzo;
+    idez_doboz.appendChild(i_div);
+    idez_doboz.appendChild(sz_fig);
+}
+megj()
